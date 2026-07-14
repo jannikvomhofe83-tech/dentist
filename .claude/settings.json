@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --version)",
+      "Bash(open \"http://localhost:3000\")",
+      "Bash(sips -g pixelWidth -g pixelHeight \"Bilder /Logo.jpeg\")",
+      "Bash(command -v magick convert ffmpeg python3)",
+      "Bash(python3 -c \"import PIL; print\\('PIL ok'\\)\")",
+      "Bash(mv public/logo-mark.png public/logo-f.png)",
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('public/logo-f.png'\\); a=im.split\\(\\)[-1]; print\\('size',im.size,'alpha min/max',a.getextrema\\(\\)\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/_next/image?url=%2Flogo-f.png&w=96&q=75\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/logo-f.png)",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(pkill -f \"next/dist/bin/next\")",
+      "Bash(rm -rf .next)",
+      "Bash(kill -9 15303)",
+      "Bash(curl -s -o /dev/null http://localhost:3000)",
+      "Bash(memory_pressure)",
+      "Bash(vm_stat)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" --max-time 60 http://localhost:3000)",
+      "Bash(curl -s --max-time 30 http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\n\" --max-time 60 http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 60 http://localhost:3000)",
+      "Bash(echo \"page: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 60 http://localhost:3000\\)\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 15 http://localhost:3000/noise.svg)",
+      "Bash(echo \"noise.svg: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 15 http://localhost:3000/noise.svg\\)\")",
+      "Bash(curl -s --max-time 30 \"http://localhost:3000/_next/static/css/app/layout.css\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 90 http://localhost:3000)",
+      "Bash(echo \"page: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 90 http://localhost:3000\\)\")",
+      "Bash(echo \"server: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 60 http://localhost:3000\\)\")"
+    ]
+  }
+}
