@@ -13,6 +13,8 @@
     @apply bg-base text-ink font-sans antialiased;
     text-rendering: optimizeLegibility;
     font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    /* safety net: no accidental horizontal scroll on small screens */
+    overflow-x: clip;
   }
 
   /* Editorial micro-typography: elegant headline wrapping + tight serif */

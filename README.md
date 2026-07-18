@@ -58,3 +58,23 @@ Client-Validierung, aria-Labels, Fehlerzustände. Telefon ist Pflicht (B2B), E-M
 validiert, DSGVO-Einwilligung Pflicht. Nach Absenden wird abhängig von den Antworten
 der Fit- (Terminbuchung) oder Nicht-Fit-Zustand gezeigt. Die Fit-Schwelle steht in
 `isFit()` in `components/sections/LeadForm.tsx` und kann angepasst werden.
+
+## Rechtliches (vor Livegang ausfüllen!)
+
+Unter `/impressum`, `/datenschutz` und `/agb` liegen die Rechtsseiten.
+Firmendaten (Sehorz Lukas und vom Hofe Jannik GbR, Orlfing 1, 84405 Dorfen)
+sind eingetragen; das Impressum ist vollständig. Noch offene, blau markierte
+`[Platzhalter]`:
+
+- **Datenschutz:** Hosting-Anbieter (+ ggf. Drittland-Hinweis), Terminbuchungs-Tool,
+  Tracking-Abschnitt (erst bei Pixel-Einbau)
+- **AGB:** Zahlungsziel, Standard-Laufzeit/Kündigungsfrist, Nutzungsrechte nach
+  Vertragsende
+
+- **Cookies:** Aktuell setzt die Seite keine einwilligungspflichtigen Cookies —
+  ein Cookie-Banner ist daher (noch) nicht erforderlich.
+- **WICHTIG:** Sobald Meta Pixel / Google Ads Tag eingebunden wird, ist ein
+  Consent-Banner (§ 25 TDDDG) zwingend und Abschnitt 7 der
+  Datenschutzerklärung muss aktiviert werden.
+- Die Texte sind sorgfältig erstellte Vorlagen, aber **keine Rechtsberatung** —
+  vor Livegang von Anwalt oder Generator (z. B. eRecht24) prüfen lassen.

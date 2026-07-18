@@ -254,7 +254,7 @@ function TextField({
         inputMode={inputMode}
         aria-invalid={!!error}
         aria-describedby={error ? `${name}-error` : undefined}
-        className={`mt-2 w-full rounded-xl border bg-base px-4 py-3 text-[15px] text-navy outline-none transition-colors placeholder:text-ink/40 ${
+        className={`mt-2 w-full rounded-xl border bg-base px-4 py-3 text-base text-navy outline-none transition-colors placeholder:text-ink/40 sm:text-[15px] ${
           error
             ? "border-amber focus:border-amber"
             : "border-line focus:border-teal"
@@ -348,14 +348,15 @@ export default function LeadForm() {
     }
   };
 
-  const motionProps = reduce
-    ? {}
-    : {
-        initial: { opacity: 0, x: 24 },
-        animate: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: -24 },
-        transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] as const },
-      };
+  /* `animate` must ALWAYS be passed: the server renders the `initial`
+     (hidden) styles into the HTML, so omitting `animate` under reduced
+     motion would leave the step invisible forever. */
+  const motionProps = {
+    initial: reduce ? false : ({ opacity: 0, x: 24 } as const),
+    animate: { opacity: 1, x: 0 },
+    exit: reduce ? undefined : ({ opacity: 0, x: -24 } as const),
+    transition: { duration: reduce ? 0 : 0.3, ease: [0.22, 1, 0.36, 1] as const },
+  };
 
   /* -------------------- Post-submit states -------------------- */
   if (submitted) return <PostSubmit variant={submitted} />;
@@ -473,7 +474,17 @@ export default function LeadForm() {
                     className="mt-0.5 h-5 w-5 shrink-0 rounded border-line accent-teal-600"
                   />
                   <span className="text-[14.5px] leading-snug text-ink">
-                    Einwilligung Datenschutz (DSGVO)
+                    Ich habe die{" "}
+                    <a
+                      href="/datenschutz"
+                      target="_blank"
+                      rel="noopener"
+                      className="font-medium text-amber underline"
+                    >
+                      Datenschutzerklärung
+                    </a>{" "}
+                    gelesen und willige in die Verarbeitung meiner Angaben zur
+                    Bearbeitung meiner Anfrage ein.
                   </span>
                 </label>
                 {contactErrors.consent && (

@@ -30,7 +30,31 @@
       "Bash(curl -s --max-time 30 \"http://localhost:3000/_next/static/css/app/layout.css\")",
       "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 90 http://localhost:3000)",
       "Bash(echo \"page: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 90 http://localhost:3000\\)\")",
-      "Bash(echo \"server: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 60 http://localhost:3000\\)\")"
+      "Bash(echo \"server: $\\(curl -s -o /dev/null -w '%{http_code}' --max-time 60 http://localhost:3000\\)\")",
+      "Read(//Users/jannikvomhofe/.ssh/**)",
+      "Bash(ssh -o StrictHostKeyChecking=accept-new -o BatchMode=yes -T git@github.com)",
+      "Skill(watch)",
+      "Skill(watch:*)",
+      "Bash(command -v pandoc)",
+      "Bash(awk '{print \"PDF:\", $9, \"\\(\"int\\($5/1024\\)\" KB\\)\"}')",
+      "Bash(xargs -I{} echo \"alte Zeiten übrig: {}\")",
+      "Bash(xargs -I{} echo \"Vorleistung im Hook: {}x\")",
+      "Bash(break)",
+      "Bash(curl -s -o /dev/null -w \"page: %{http_code}\\\\n\" --max-time 60 http://localhost:3000)",
+      "Bash(npm i *)",
+      "Bash(node \"/private/tmp/claude-501/-Users-jannikvomhofe-Desktop-Webdesign-Landing-Dentist/b33c2868-de4f-497c-8519-98ead710acb0/scratchpad/find-overflow.mjs\")",
+      "Bash(cp \"/private/tmp/claude-501/-Users-jannikvomhofe-Desktop-Webdesign-Landing-Dentist/b33c2868-de4f-497c-8519-98ead710acb0/scratchpad/find-overflow.mjs\" ./_find-overflow.mjs)",
+      "Bash(node _find-overflow.mjs)",
+      "Bash(node _mobile-shot.mjs \"/private/tmp/claude-501/-Users-jannikvomhofe-Desktop-Webdesign-Landing-Dentist/b33c2868-de4f-497c-8519-98ead710acb0/scratchpad/mobile\")",
+      "Bash(node _check-dom.mjs)",
+      "Bash(node _mobile-scroll.mjs \"/private/tmp/claude-501/-Users-jannikvomhofe-Desktop-Webdesign-Landing-Dentist/b33c2868-de4f-497c-8519-98ead710acb0/scratchpad/mobile/scroll\")",
+      "Bash(node _check-form.mjs)",
+      "Bash(node _shot-el.mjs \"#formular\" \"/private/tmp/claude-501/-Users-jannikvomhofe-Desktop-Webdesign-Landing-Dentist/b33c2868-de4f-497c-8519-98ead710acb0/scratchpad/mobile/form.png\")",
+      "Bash(node _shot-el.mjs '#top' __TRACKED_VAR__/hero3.png)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"tsc exit: $?\")",
+      "Bash(node _shot-el.mjs 'main > section:last-of-type' __TRACKED_VAR__/faq.png)",
+      "Bash(node _shot-el.mjs footer __TRACKED_VAR__/footer.png)"
     ]
   }
 }

@@ -104,7 +104,7 @@ export default function FounderVideo() {
             onClick={toggleCaptions}
             aria-pressed={captions}
             aria-label="Untertitel umschalten"
-            className={`flex h-9 items-center gap-1.5 rounded-full px-3 text-[12px] font-semibold backdrop-blur-sm transition-colors ${
+            className={`flex h-10 items-center gap-1.5 rounded-full px-3 text-[12px] font-semibold backdrop-blur-sm transition-colors sm:h-9 ${
               captions
                 ? "bg-white text-navy"
                 : "bg-navy-900/70 text-white hover:bg-navy-900/85"
@@ -117,7 +117,7 @@ export default function FounderVideo() {
             type="button"
             onClick={toggleSound}
             aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
-            className="flex h-9 items-center gap-1.5 rounded-full bg-white px-3.5 text-[12px] font-semibold text-navy shadow-soft transition-transform hover:scale-[1.03]"
+            className="flex h-10 items-center gap-1.5 rounded-full bg-white px-3.5 text-[12px] font-semibold text-navy shadow-soft transition-transform hover:scale-[1.03] sm:h-9"
           >
             {muted ? (
               <>

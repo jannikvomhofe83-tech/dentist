@@ -1,0 +1,7 @@
+# Netlify-Konfiguration für Next.js 15 (App Router).
+# Netlify erkennt Next.js automatisch und nutzt die offizielle Next-Runtime.
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

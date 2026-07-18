@@ -4,8 +4,9 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { Check } from "@/components/ui/icons";
 
 const reassure = [
-  "Schritt 1: nur ein Klick, keine Verpflichtung.",
-  "Ehrliche Einschätzung für Ihren Standort.",
+  "Kostenlose Standort- & Marktanalyse für Ihr Einzugsgebiet.",
+  "Kostenloser Website- und SEO-Check Ihrer Praxis.",
+  "Ehrliche Einschätzung, auch wenn sie gegen uns spricht.",
   "Antwort innerhalb von 24 Stunden.",
 ];
 

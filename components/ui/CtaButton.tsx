@@ -18,7 +18,8 @@ const variants: Record<Variant, string> = {
 
 const sizes: Record<Size, string> = {
   md: "px-6 py-3 text-[15px]",
-  lg: "px-7 py-4 text-[16px]",
+  // Mobile: full width, tighter type so the label fits one line; desktop unchanged.
+  lg: "w-full px-5 py-3.5 text-[15px] sm:w-auto sm:px-7 sm:py-4 sm:text-[16px]",
 };
 
 const badgeVariants: Record<Variant, string> = {
@@ -47,7 +48,7 @@ export default function CtaButton({
     >
       <span>{children}</span>
       <span
-        className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${badgeVariants[variant]}`}
+        className={`hidden h-6 w-6 shrink-0 items-center justify-center rounded-full sm:flex ${badgeVariants[variant]}`}
       >
         <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
       </span>

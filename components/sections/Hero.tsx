@@ -1,6 +1,13 @@
 import FounderVideo from "@/components/ui/FounderVideo";
 import CtaButton from "@/components/ui/CtaButton";
 import Reveal from "@/components/ui/Reveal";
+import { Check } from "@/components/ui/icons";
+
+const freebies = [
+  "Standort- & Marktanalyse",
+  "Website-Check",
+  "SEO-Check",
+];
 
 export default function Hero() {
   return (
@@ -75,9 +82,28 @@ export default function Hero() {
           </div>
         </Reveal>
 
+        {/* Free upfront deliverables — the strongest argument, placed before the CTA */}
+        <Reveal delay={0.22}>
+          <div className="mx-auto mt-9 max-w-2xl rounded-xl border border-line bg-[#F7F8FA] px-5 py-4 text-center">
+            <p className="eyebrow text-amber-600">
+              Kostenlos vorab, ohne Gegenleistung
+            </p>
+            <ul className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              {freebies.map((f) => (
+                <li key={f} className="flex items-center gap-2">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber/10">
+                    <Check className="h-3 w-3 text-amber" />
+                  </span>
+                  <span className="text-[15px] font-semibold text-navy">{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+
         {/* CTA — kept in the hero */}
         <Reveal delay={0.25}>
-          <div className="mt-10 flex flex-col items-center">
+          <div className="mt-7 flex flex-col items-center">
             <CtaButton href="#formular">
               Kostenlose Potenzial-Analyse anfragen
             </CtaButton>
