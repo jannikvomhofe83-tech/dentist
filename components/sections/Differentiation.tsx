@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { Check } from "@/components/ui/icons";
 
 const points = [
@@ -31,12 +31,14 @@ export default function Differentiation() {
     <section className="section-pad border-t border-line bg-base">
       <div className="container-page">
         <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
-          {/* Founders photo placeholder */}
+          {/* Portrait Jannik */}
           <Reveal className="order-2 lg:order-1">
-            <ImagePlaceholder
-              label="Foto: Lukas & Jannik (Gründer)"
-              path="/images/hero-founders.jpg"
-              ratio="aspect-[4/5]"
+            <Image
+              src="/images/jannik.jpg"
+              alt="Jannik vom Hofe, Gründer von Flowstate AI"
+              width={880}
+              height={1100}
+              className="w-full rounded-card border border-line object-cover shadow-card"
             />
           </Reveal>
 
@@ -51,7 +53,7 @@ export default function Differentiation() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="mt-3 font-serif text-[clamp(28px,3.6vw,44px)] leading-[1.08] text-navy">
-                Warum Lukas &amp; Jannik
+                Über Jannik
               </h2>
             </Reveal>
 

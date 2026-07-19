@@ -25,13 +25,8 @@ export default function Hero() {
               <span>Zahnkliniken</span>
             </div>
           </Reveal>
-          <Reveal delay={0.05}>
-            <p className="eyebrow mt-5 text-amber">
-              Performance-Marketing ausschließlich für Premium-Implantologie
-            </p>
-          </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="nums mt-4 font-serif text-[clamp(30px,4.4vw,52px)] font-bold leading-[1.06] text-navy">
+            <h1 className="nums mt-6 font-serif text-[clamp(30px,4.4vw,52px)] font-bold leading-[1.06] text-navy">
               Ø&nbsp;20.000&nbsp;Euro Mehrumsatz pro Monat durch planbare
               Neupatienten.
               <span className="mt-3 block text-[0.64em] font-bold leading-tight text-amber">
@@ -65,8 +60,21 @@ export default function Hero() {
           </div>
         </Reveal>
 
-        {/* 3 · SUBLINE — directly under the video, emphasised */}
+        {/* 3 · CTA — directly under the video */}
         <Reveal delay={0.15}>
+          <div className="mt-9 flex flex-col items-center">
+            <CtaButton href="#formular">
+              Kostenlose Potenzial-Analyse anfragen
+            </CtaButton>
+            <p className="mt-3 text-center text-[13px] text-ink/60">
+              Kostenlos &amp; unverbindlich · Nur für Praxen mit
+              Implantat-Schwerpunkt · Antwort innerhalb von 24 Stunden
+            </p>
+          </div>
+        </Reveal>
+
+        {/* 4 · SUBLINE — under the button */}
+        <Reveal delay={0.2}>
           <div className="mx-auto mt-9 max-w-2xl text-center">
             <span
               aria-hidden
@@ -82,8 +90,8 @@ export default function Hero() {
           </div>
         </Reveal>
 
-        {/* Free upfront deliverables — the strongest argument, placed before the CTA */}
-        <Reveal delay={0.22}>
+        {/* 5 · Free upfront deliverables */}
+        <Reveal delay={0.25}>
           <div className="mx-auto mt-9 max-w-2xl rounded-xl border border-line bg-[#F7F8FA] px-5 py-4 text-center">
             <p className="eyebrow text-amber-600">
               Kostenlos vorab, ohne Gegenleistung
@@ -98,19 +106,6 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
-        </Reveal>
-
-        {/* CTA — kept in the hero */}
-        <Reveal delay={0.25}>
-          <div className="mt-7 flex flex-col items-center">
-            <CtaButton href="#formular">
-              Kostenlose Potenzial-Analyse anfragen
-            </CtaButton>
-            <p className="mt-3 text-center text-[13px] text-ink/60">
-              Kostenlos &amp; unverbindlich · Nur für Praxen mit
-              Implantat-Schwerpunkt · Antwort innerhalb von 24 Stunden
-            </p>
           </div>
         </Reveal>
       </div>
