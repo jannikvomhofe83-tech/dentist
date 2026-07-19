@@ -28,7 +28,7 @@ export default function Hero() {
           <Reveal delay={0.1}>
             <h1 className="nums mt-6 font-serif text-[clamp(30px,4.4vw,52px)] font-bold leading-[1.06] text-navy">
               Ø&nbsp;20.000&nbsp;Euro Mehrumsatz pro Monat durch planbare
-              Neupatienten.
+              Selbstzahler.
               <span className="mt-3 block text-[0.64em] font-bold leading-tight text-amber">
                 Was würde das für Ihre Praxis bedeuten?
               </span>
